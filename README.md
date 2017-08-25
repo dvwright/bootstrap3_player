@@ -1,3 +1,34 @@
+NOTE: This is a fork to support dynamicly created elements, such as with jquery. 
+
+For example:
+
+     $("<audio/>", {
+                "id": data.id,
+                controls: "controls",
+                "data-info-album-art": "image.png",
+                "data-info-id": data.info.id,
+                "data-info-album-title": data.title,
+                "data-info-artist": data.artist,
+                "data-info-title": data.info.title,
+                "data-info-label": data.label, "),
+                "data-info-year": data.year,
+                "data-info-att": data.attr,
+                "data-info-att-link": "/",
+                html: "An html5-capable browser is required to play this audio.",
+            }).appendTo("#body");
+
+            $("<source>", {
+                src: 'my-mp3file.mp3',
+                type: "audio/mpeg",
+            }).appendTo('#' + data.id);
+
+            // this method initializes the bootstrap3_player
+            $("#" + data.id).bootAudio();
+            
+End.
+
+            
+
 bootstrap3_player
 ================
 
